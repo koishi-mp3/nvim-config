@@ -37,9 +37,11 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
+
 vim.opt.termguicolors = true
 vim.cmd.colorscheme("neopywal")
 
+vim.keymap.set('n', '<C-n>', ':Neotree <CR> {silent = false}')
 
 vim.opt.number = true
 vim.opt.cursorline = true
@@ -61,3 +63,5 @@ vim.opt.undofile = true
 vim.opt.undodir = undodir
 
 vim.o.autocomplete = true
+
+vim.lsp.enable('clangd')
